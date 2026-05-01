@@ -1,0 +1,135 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background Image */
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.1);
+  animation: zoom 10s ease-in-out infinite alternate;
+}
+
+/* Dark Gradient Overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.4)
+  );
+}
+
+/* Content */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  color: white;
+  max-width: 600px;
+}
+
+/* Title */
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  animation: slideUp 1s ease forwards;
+}
+
+.hero-title span {
+  color: #facc15;
+}
+
+/* Subtitle */
+.hero-subtitle {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #ddd;
+  animation: fadeIn 2s ease;
+}
+
+/* Buttons */
+.hero-buttons {
+  margin-top: 25px;
+}
+
+.btn {
+  padding: 12px 25px;
+  margin-right: 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+/* Primary Button */
+.btn.primary {
+  background: #facc15;
+  color: black;
+}
+
+.btn.primary:hover {
+  background: #eab308;
+  transform: scale(1.05);
+}
+
+/* Secondary Button */
+.btn.secondary {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.btn.secondary:hover {
+  background: white;
+  color: black;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-content {
+    left: 5%;
+  }
+}
