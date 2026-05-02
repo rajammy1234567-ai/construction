@@ -6,7 +6,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      
+
       {/* Logo */}
       <h2 className="logo">
         Build<span>Master</span>
@@ -17,11 +17,14 @@ export default function Navbar() {
         <a href="#about" onClick={() => setMenu(false)}>About</a>
         <a href="#services" onClick={() => setMenu(false)}>Services</a>
         <a href="#projects" onClick={() => setMenu(false)}>Projects</a>
-        <a className='navbtn' href="#contact" onClick={() => setMenu(false)}>Contact</a>
+        <a  href="#contact" onClick={() => setMenu(false)}>Contact</a>
       </div>
 
       {/* Menu Icon */}
-      <div className={`menu-btn ${menu ? "open" : ""}`} onClick={() => setMenu(!menu)}>
+      <div 
+        className="menu-btn" 
+        onClick={() => setMenu(!menu)}
+      >
         <span></span>
         <span></span>
         <span></span>

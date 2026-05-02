@@ -21,21 +21,18 @@ export default function Hero() {
         <div className="hero-buttons">
           <button
             className="btn primary"
-            onClick={() => {
-              document.getElementById("about").scrollIntoView({
-                behavior: "smooth",
-              });
-            }}
+            onClick={() =>
+              document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })
+            }
           >
             Get Started
           </button>
+
           <button
             className="btn secondary"
-            onClick={() => {
-              document.getElementById("projects").scrollIntoView({
-                behavior: "smooth",
-              });
-            }}
+            onClick={() =>
+              document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
+            }
           >
             Our Projects
           </button>
