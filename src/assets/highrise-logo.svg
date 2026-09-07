@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#24805c" />
+      <stop offset="50%" stop-color="#186348" />
+      <stop offset="100%" stop-color="#0f4430" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <!-- Top Red Beacon Circle (Exact poster signature) -->
+  <circle cx="120" cy="36" r="14" fill="#d93829" filter="url(#shadow)" />
+
+  <!-- Highrise Architectural Geometric Columns (Matching poster ribbon/skyscraper geometry) -->
+  <g fill="url(#greenGrad)" filter="url(#shadow)">
+    <!-- Central Tower Spire -->
+    <path d="M 120 54 L 138 90 L 126 90 L 126 150 L 114 150 L 114 90 L 102 90 Z" />
+    
+    <!-- Left Skyscraper Pillar & Interlocking Ribs -->
+    <path d="M 102 96 L 102 120 L 74 120 L 74 240 L 92 240 L 92 138 L 114 138 L 114 156 L 92 156 L 92 270 L 56 270 L 56 102 L 102 60 Z" />
+
+    <!-- Right Skyscraper Pillar & Interlocking Ribs -->
+    <path d="M 138 96 L 184 102 L 184 270 L 148 270 L 148 156 L 126 156 L 126 138 L 148 138 L 148 240 L 166 240 L 166 120 L 138 120 Z" />
+
+    <!-- Central Inner Cross-Brace -->
+    <path d="M 102 170 L 138 170 L 138 186 L 102 186 Z" />
+    
+    <!-- Lower Central Foundation Columns -->
+    <path d="M 108 200 L 132 200 L 132 270 L 108 270 Z" />
+  </g>
+</svg>

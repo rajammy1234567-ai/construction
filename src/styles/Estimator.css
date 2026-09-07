@@ -1,0 +1,243 @@
+.estimator-section {
+  padding: 40px 0;
+  background: var(--slate-50);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.estimator-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.estimator-box {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 20px;
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.estimator-controls {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--slate-800);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-group label i {
+  color: var(--primary);
+}
+
+.form-group select {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--slate-300);
+  background: #ffffff;
+  color: var(--slate-900);
+  outline: none;
+  font-family: var(--font-body);
+}
+
+.form-group select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(21, 98, 67, 0.15);
+}
+
+.slider-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-value {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--primary);
+  background: var(--primary-soft);
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--primary-border);
+}
+
+.area-slider {
+  width: 100%;
+  accent-color: var(--primary);
+  height: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 2px;
+}
+
+.slider-scale {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.68rem;
+  color: var(--slate-500);
+}
+
+/* Result Column */
+.estimator-result {
+  background: #0f241a;
+  color: #ffffff;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.result-header {
+  margin-bottom: 14px;
+}
+
+.result-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #a7f3d0;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-bottom: 4px;
+}
+
+.result-header h3 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.result-type {
+  font-size: 0.76rem;
+  color: #cbd5e1;
+}
+
+.result-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.metric-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+}
+
+.metric-title {
+  display: block;
+  font-size: 0.68rem;
+  color: #94a3b8;
+  margin-bottom: 2px;
+}
+
+.metric-val {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.metric-val i {
+  color: #34d399;
+}
+
+.result-includes {
+  margin-bottom: 16px;
+}
+
+.result-includes h4 {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #cbd5e1;
+  margin-bottom: 6px;
+}
+
+.result-includes ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.result-includes li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  color: #e2e8f0;
+}
+
+.result-includes li i {
+  color: #34d399;
+  font-size: 0.72rem;
+}
+
+.result-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btn-full {
+  width: 100%;
+  text-align: center;
+  padding: 9px;
+  font-size: 0.84rem;
+}
+
+.btn-call-outline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-call-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 840px) {
+  .estimator-box {
+    grid-template-columns: 1fr;
+  }
+  .estimator-controls, .estimator-result {
+    padding: 18px;
+  }
+}
