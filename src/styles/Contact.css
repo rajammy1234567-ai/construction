@@ -222,7 +222,6 @@
   background: #ffffff;
   color: var(--slate-900);
   outline: none;
-  font-family: var(--font-body);
 }
 
 .f-group input:focus, .f-group select:focus, .f-group textarea:focus {

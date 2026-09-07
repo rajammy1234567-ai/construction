@@ -44,7 +44,6 @@
 
 .footer-title {
   display: block;
-  font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 800;
   color: #34d399;
@@ -53,7 +52,6 @@
 
 .footer-sub {
   display: block;
-  font-family: var(--font-heading);
   font-size: 0.78rem;
   font-weight: 700;
   color: #ffffff;

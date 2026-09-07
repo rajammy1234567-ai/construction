@@ -1,20 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  /* Ultra-Premium Corporate Architectural Palette */
+  /* Luxury Architectural Brand Identity */
   --primary: #156243;
   --primary-hover: #0e4b32;
-  --primary-dark: #0a3322;
   --primary-light: #1f855c;
-  --primary-soft: #edf8f2;
-  --primary-border: #b8e6d2;
+  --primary-soft: #f0fdf4;
+  --primary-border: rgba(21, 98, 67, 0.2);
   
   --accent-red: #d0342c;
-  --accent-red-soft: #fdf2f2;
-  --accent-gold: #b45309;
-  --accent-gold-soft: #fef3c7;
+  --accent-red-soft: #fef2f2;
+  --accent-gold: #c59b27;
+  --accent-gold-soft: #fef9c3;
   
-  /* Slate & Dark Accents */
+  /* Modern Dark Luxury Surfaces */
+  --dark-navy: #07120d;
+  --dark-surface: #0b1a13;
+  --dark-card: #10241b;
+  --dark-border: rgba(255, 255, 255, 0.1);
+  
+  /* Slate & Clean Neutrals */
   --slate-900: #0f172a;
   --slate-800: #1e293b;
   --slate-700: #334155;
@@ -27,29 +32,24 @@
   --slate-50: #f8fafc;
   --white: #ffffff;
   
-  /* Surface & Border */
-  --bg-body: #f8fafc;
-  --bg-card: #ffffff;
-  --border-subtle: #e2e8f0;
-  --border-card: #e5e9ee;
-  
-  /* Modern Clean Sans-Serif Typography */
-  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  /* Typography */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   
   /* Shadows */
-  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
-  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
-  --shadow-md: 0 6px 20px rgba(15, 23, 42, 0.08);
-  --shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.12);
+  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.14);
+  --shadow-glow: 0 0 30px rgba(31, 133, 92, 0.35);
   
-  /* Border Radii */
+  /* Radii */
   --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
   --radius-full: 9999px;
   
-  --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -62,7 +62,7 @@ html {
   scroll-behavior: smooth;
   font-family: var(--font-body);
   color: var(--slate-900);
-  background-color: var(--bg-body);
+  background-color: #f8fafc;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
 }
@@ -77,8 +77,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   color: var(--slate-900);
   font-weight: 700;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 a {
@@ -101,50 +100,51 @@ img {
   display: block;
 }
 
-/* Container */
+/* Fluid Container */
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1220px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
 @media (max-width: 640px) {
   .container {
-    padding: 0 14px;
+    padding: 0 16px;
   }
 }
 
-/* Tight & Punchy Section Headers */
+/* Section Header */
 .section-tag {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   background: var(--primary-soft);
   color: var(--primary);
-  font-size: 0.74rem;
-  font-weight: 700;
-  letter-spacing: 0.6px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
-  padding: 4px 12px;
+  padding: 5px 14px;
   border-radius: var(--radius-full);
   border: 1px solid var(--primary-border);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .section-tag .dot {
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: var(--accent-red);
 }
 
 .section-title {
-  font-size: 1.85rem;
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
   font-weight: 800;
   color: var(--slate-900);
-  margin-bottom: 8px;
-  letter-spacing: -0.03em;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
 }
 
 .section-title span {
@@ -152,23 +152,23 @@ img {
 }
 
 .section-subtitle {
-  font-size: 0.94rem;
+  font-size: 0.96rem;
   color: var(--slate-600);
   max-width: 620px;
   margin: 0 auto;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 @media (max-width: 640px) {
   .section-title {
-    font-size: 1.5rem;
+    font-size: 1.65rem;
   }
   .section-subtitle {
-    font-size: 0.88rem;
+    font-size: 0.9rem;
   }
 }
 
-/* Clean Buttons */
+/* Buttons */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -176,8 +176,8 @@ img {
   gap: 8px;
   background: var(--primary);
   color: #ffffff;
-  padding: 10px 20px;
-  font-size: 0.9rem;
+  padding: 12px 22px;
+  font-size: 0.92rem;
   font-weight: 600;
   border-radius: var(--radius-sm);
   transition: var(--transition);
@@ -185,7 +185,8 @@ img {
 
 .btn-primary:hover {
   background: var(--primary-hover);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(21, 98, 67, 0.3);
 }
 
 .btn-whatsapp {
@@ -195,14 +196,16 @@ img {
   gap: 8px;
   background: #25d366;
   color: #ffffff;
-  padding: 10px 20px;
-  font-size: 0.9rem;
-  font-weight: 600;
+  padding: 12px 22px;
+  font-size: 0.92rem;
+  font-weight: 700;
   border-radius: var(--radius-sm);
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
   transition: var(--transition);
 }
 
 .btn-whatsapp:hover {
   background: #1eb956;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Founder.css";
-import aboutImg from "../assets/about.jpg";
+import founderImg from "../assets/er_vijay_kumar_gupta.jpg";
 
 export default function Founder() {
   return (
@@ -15,7 +15,7 @@ export default function Founder() {
             </div>
 
             <div className="id-img-box">
-              <img src={aboutImg} alt="Er. Vijay Kumar Gupta" />
+              <img src={founderImg} alt="Er. Vijay Kumar Gupta" />
               <div className="usa-flag-badge">
                 <strong>USA Ph.D</strong>
                 <span>Civil Structural Design</span>
